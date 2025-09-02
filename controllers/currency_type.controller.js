@@ -62,7 +62,7 @@ const updateCurrency=async (req,res)=>{
 const deleteCurrency=async (req,res)=>{
     try {
         const {id}=req.params
-        const currency=await Currency.destroy(req.body,{
+        const currency=await Currency.destroy({
             where:{id},
             returning:true
         })
